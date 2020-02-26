@@ -11,27 +11,41 @@ export class SimpleChatComponent implements OnInit {
 
   senderMsg = '';
   time = '20h';
-  msgUser = 'Nunmuthu'
+  msgUser = 'Nunmuthu';
+  msg = [];
   constructor() { }
 
   ngOnInit() {
-    Swal.fire({
-      position: 'top-end',
-      // icon: 'success',
-      // title: this.msgUser,
-      showConfirmButton: false,
-      // timer: 1500,
-      toast: true,
-      html: `
+
+  }
+
+  notificationAlert(msgPasser: string) {
+    if (msgPasser === 'sender' && this.senderMsg != '') {
+      Swal.fire({
+        position: 'bottom-start',
+        // icon: 'success',
+        // title: this.msgUser,
+        showConfirmButton: false,
+        timer: 2000,
+        toast: true,
+        html: `
         <div style="width: 400px;">
-        <div style="display:inline-block;text-align: left">
+        <div style="display:inline-block;text-align: left;align-items: left;">
         <img src="../../assets/usre.jpeg" alt />
-        <span>${this.msgUser}</span>
+        
         </div>
-        <div  style="display:inline-block;text-align: right">${this.time}</div>
+        <div class="time" style="display:inline-block;">
+        <span style="font-weight: bolder;">${this.msgUser}</span><br/>
+        <span>${this.time}</span></div>
         </div>
       `,
-    });
+        customClass: {
+          content: 'content-class'
+        }
+      });
+    }
+    if (this.senderMsg != '')
+      this.msg.push({ MSG: this.senderMsg, CLASS: msgPasser })
   }
 
 }

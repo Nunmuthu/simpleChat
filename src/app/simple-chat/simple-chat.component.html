@@ -1,7 +1,20 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-4">
-            <input type="text" [(ngModel)]="senderMsg">
+            <h2>Send Message</h2>
+            <input type="text" class="form-control" [(ngModel)]="senderMsg">
+            <button class="btn btn-danger" (click)="notificationAlert('sender')">Trigger Msg As Sender</button>
+            <button class="btn btn-danger" (click)="notificationAlert('reciever')">Trigger Msg As Reciever</button>
+
         </div>
-    </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4" style="height: 100vh;bottom:0;border: 1px solid grey;">
+            <h2>Chat Window</h2>
+            <div *ngFor="let eachmsg of msg">
+                <div class="{{'msg ' + eachmsg.CLASS}}">
+                    {{eachmsg.MSG}}
+                </div>
+            </div>
+        </div>
+    </div>  
 </div>

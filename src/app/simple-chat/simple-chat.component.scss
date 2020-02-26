@@ -1,3 +1,25 @@
-#swal2-content {
-    text-align: left !important;
+.swal2-content {
+  text-align: left !important;
+}
+.content-class {
+  text-align: left !important;
+}
+.msg{
+    width: 75%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding: 5px;
+}
+.sender {
+  margin-right: 25%;
+  background-color: aquamarine;
+}
+.reciever {
+  margin-left: 25%;
+  background-color: bisque;
+}
+
+button{
+    margin: 5px;
 }

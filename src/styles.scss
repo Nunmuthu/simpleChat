@@ -1,2 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
+.swal2-content {
+    text-align: left !important;
+}
+.content-class{
+    text-align: left !important;
+    justify-content: top;
+}
+.content-class .time{
+    right: 0;
+    justify-content: flex-end
+}
