@@ -10,7 +10,6 @@ import Swal from 'sweetalert2'
 export class SimpleChatComponent implements OnInit {
 
   senderMsg = '';
-  time = '20h';
   msgUser = 'Nunmuthu';
   msg = [];
   constructor() { }
@@ -22,9 +21,9 @@ export class SimpleChatComponent implements OnInit {
   notificationAlert(msgPasser: string) {
     if (msgPasser === 'sender' && this.senderMsg != '') {
       let date = new Date();
-      let msgDate = date.getDate() + '-' + (date.getMonth()+1) + '-' + date.getFullYear();
+      let msgDate = date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
       Swal.fire({
-        position: 'bottom-start',
+        position: 'bottom-end',
         // icon: 'success',
         // title: this.msgUser,
         showConfirmButton: false,
@@ -35,7 +34,7 @@ export class SimpleChatComponent implements OnInit {
         <div style="display:inline-block;text-align: left;align-items: left;">
         <img src="../../assets/usre.jpeg" alt />
         
-        </div>
+        </div>ff
         <div class="time" style="display:inline-block;">
         <span style="font-weight: bolder;">${this.msgUser}</span><br/>
         <span>${msgDate}</span></div>
