@@ -34,7 +34,7 @@ export class SimpleChatComponent implements OnInit {
         <div style="display:inline-block;text-align: left;align-items: left;">
         <img src="../../assets/usre.jpeg" alt />
         
-        </div>ff
+        </div>
         <div class="time" style="display:inline-block;">
         <span style="font-weight: bolder;">${this.msgUser}</span><br/>
         <span>${msgDate}</span></div>
@@ -42,7 +42,7 @@ export class SimpleChatComponent implements OnInit {
       `,
         customClass: {
           content: 'content-class'
-        }
+        } 
       });
     }
     if (this.senderMsg != '')
