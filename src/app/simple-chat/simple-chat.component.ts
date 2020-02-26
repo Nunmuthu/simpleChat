@@ -21,6 +21,8 @@ export class SimpleChatComponent implements OnInit {
 
   notificationAlert(msgPasser: string) {
     if (msgPasser === 'sender' && this.senderMsg != '') {
+      let date = new Date();
+      let msgDate = date.getDate() + '-' + (date.getMonth()+1) + '-' + date.getFullYear();
       Swal.fire({
         position: 'bottom-start',
         // icon: 'success',
@@ -36,7 +38,7 @@ export class SimpleChatComponent implements OnInit {
         </div>
         <div class="time" style="display:inline-block;">
         <span style="font-weight: bolder;">${this.msgUser}</span><br/>
-        <span>${this.time}</span></div>
+        <span>${msgDate}</span></div>
         </div>
       `,
         customClass: {
